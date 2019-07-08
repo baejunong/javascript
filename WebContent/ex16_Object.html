@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>객체 : Object</title>
+		<script>
+//			자바스크립트에서 객체는 Object라고 하고, properties(상태값)와 function(기능)을 가지고 있다.
+//			생성 방법 1
+			var person1 = new Object();
+//			상태값
+			person1["name"] = "홍길동";
+			person1["age"] = 14;
+			person1["addr"] = "서울";
+			person1.salary = 3600;
+			
+			document.write(person1["name"] + "<br>");
+			document.write(person1["age"] + "<br>");
+			document.write(person1.addr + "<br>");
+			document.write(person1.salary + "<br>");
+			document.write("<hr>");
+			
+//			생성 방법 2
+			var person2 = {name : "임꺽정", age : 24, addr : "충청도", salary : 3400};
+			document.write(person2.name + "<br>");
+			document.write(person2.age + "<br>");
+			document.write(person2.addr + "<br>");
+			document.write(person2.salary + "<br>");
+			document.write("<hr>");
+			
+//			생성 방법 3
+			var person3 = {
+				name : "장길산",
+				age : 36,
+				salary : 4600,
+				job : function() {
+					return 2400 * 12;
+				},
+				prn : function() {
+					return this.name + ", " + this.age + ", " + this.salary;
+				}
+			};
+			document.write(person3.name + "<br>");
+			document.write(person3.age + "<br>");
+			document.write(person3.salary + "<br>");
+			document.write(person3.job() + "<br>");
+			document.write(person3.prn() + "<br>");
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

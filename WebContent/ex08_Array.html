@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열 : Array()</title>
+		<script>
+			// 배열 선언 : 크기를 지정하지 않아도 된다. 모든 자료를 담을 수 있다.
+			
+			// 방법1 
+			var arr = new Array();
+			arr[0] = 10;
+			arr[1] = true;
+			arr[2] = 'A';
+			arr[3] = "ICT 인재 개발원";
+			arr[4] = 180.14;
+			
+			// 출력
+			for (var i = 0; i < arr.length; i++) {
+				document.write(arr[i] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+			}
+			document.write("<hr>");
+			
+			// 방법2
+			var arr2 = ["포도", 15, false, 'k', 89.8];
+			for ( var k in arr2) {
+				document.write(arr2[k] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+			}
+			document.write("<hr>");
+			
+			// 방법3
+			var arr3 = new Array("Boys", 1234.23, 456, true, 'Y');
+			for ( var k in arr3) {
+				document.write(arr3[k] + "&nbsp;&nbsp;&nbsp;&nbsp;");
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

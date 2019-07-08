@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>조건문 : switch문</title>
+		<script type="text/javascript">
+			// 자바와 형식은 같음
+			// 변수 k가 a,A이면 미국, b,B이면 브라질, c,C이면 캐나다, k,K이면 한국, 나머지 중국,
+			var k = prompt("영어를 입력하세요", "k");
+			var res;
+			switch (k) {
+				case "a": 
+				case "A": res = "미국"; break;
+				case "b": 
+				case "B": res = "브라질"; break;
+				case "c": 
+				case "C": res = "캐나다"; break;
+				case "k": 
+				case "K": res = "한국"; break;
+				default: res = "중국"; break;
+			}
+			document.write("<h2>결과 : " + res + "</h2>");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

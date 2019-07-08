@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM Document</title>
+		<script>
+//			html 요소 변경하기
+//			element.innerHTML
+//			element.attribute
+//			element.style.property
+//			element.setAttribute(attribute, value)
+			
+//			html 요소 추가 삭제
+//			document.createElement(element)
+//			document.removeChild(element)
+//			document.appendChild(element)
+//			document.replaceChild(new, old)
+//			document.write(text)
+		</script>
+	</head>
+	<body>
+		<p id="demo1">Hello World!!</p>
+		<p><span>WELCOME KOREA</span></p>
+		<p class="demo2">ICT 인재 개발원 </p>
+		<p class="demo2">2 강의장 </p>
+		<hr>
+		<p id="res1"></p>
+		<p id="res2"></p>
+		<p id="res3"></p>
+		
+		<script>
+//			document.body, document.forms, document.images
+//			html 요소 찾기 메소드 :
+//			document.getElementById(id)
+//			document.getElementsByTagName(name) // 배열로 받는다.
+//			document.getElementsByClassName(name) // 배열로 받는다.
+			var my1 = document.getElementById("demo1");
+			document.getElementById("res1").innerHTML = my1.innerHTML;
+			
+			var my2 = document.getElementsByTagName("span");
+			document.getElementById("res2").innerHTML = my2[0].innerHTML;
+			
+			var my3 = document.getElementsByClassName("demo2");
+			document.getElementById("res3").innerHTML = my3[0].innerHTML + my3[1].innerHTML;
+		</script>
+	</body>
+</html>

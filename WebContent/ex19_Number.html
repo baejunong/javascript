@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Number 클래스</title>
+		<script>
+//			사칙연산 : 숫자는 가능, +를 제외한 -,*,/,%는 숫자형 문자일 경우 계산 가능
+			var su1 = "10";
+			var su2 = "6";
+			document.write(su1 + su2 + "<br>"); // 계산 X, 문자연결자
+			document.write(su1 - su2 + "<br>"); // 계산 OK
+			document.write(su1 * su2 + "<br>"); // 계산 OK
+			document.write(su1 / su2 + "<br>"); // 계산 OK
+			document.write(su1 % su2 + "<br>"); // 계산 OK
+			document.write("<hr>");
+			
+//			숫자를 문자열로 변경하는 toString()
+			su1 = 10;
+			su2 = 6;
+			document.write(su1 + su2 + "<br>"); // 계산 OK : 16
+			document.write(su1 + su2.toString() + "<br>"); // 계산 X : 106
+			document.write("<hr>");
+			
+//			toFixed() : 지정된 소숫점 이하 자릿수로 작성됨(나머지는 반올림) // 음수 사용 못함
+			su1 = 9.656;
+			su2 = 9.444;
+			document.write(su1.toFixed(0) + "<br>"); // 10
+			document.write(su1.toFixed(1) + "<br>"); // 9.7
+			document.write(su1.toFixed(2) + "<br>"); // 9.66
+			document.write(su1.toFixed(3) + "<br>"); // 9.656
+			document.write("<hr>");
+			document.write(su2.toFixed(0) + "<br>"); // 9
+			document.write(su2.toFixed(1) + "<br>"); // 9.4
+			document.write(su2.toFixed(2) + "<br>"); // 9.44
+			document.write(su2.toFixed(3) + "<br>"); // 9.444
+			document.write("<hr>");
+			
+//			변수를 숫자로 변환 (문자열을 숫자로 변환) : Number, parseInt, parseFloat
+//			NaN : 숫자가 들어갈 자리에 숫자가 아닌 다른 값이 들어오면 표시되는 예약어 : 숫자(/,8,-)문자 = NaN
+//			isNaN : NaN를 확인 (NaN이면 true, 아니면 false)
+			document.write(Number(true) + 10 + "<br>"); // 11
+			document.write(Number(false) + 10 + "<br>"); // 10
+			document.write(Number("10") + 10 + "<br>"); // 20
+			document.write(Number("10.03") + 10 + "<br>"); // 20.03
+			document.write(Number("10,03") + 10 + "<br>"); // NaN
+			document.write(Number("10A") + 10 + "<br>"); // NaN
+			document.write(Number("A10") + 10 + "<br>"); // NaN
+			document.write(Number("   10") + 10 + "<br>"); // 20
+			document.write(Number("10   ") + 10 + "<br>"); // 20
+			document.write(Number("   10   ") + 10 + "<br>"); // 20
+			document.write(Number("Hello") + 10 + "<br>"); // NaN
+			document.write("<hr>");
+			document.write(parseInt(true) + 10 + "<br>"); // 11 => NaN
+			document.write(parseInt(false) + 10 + "<br>"); // 10 => NaN
+			document.write(parseInt("10") + 10 + "<br>"); // 20
+			document.write(parseInt("10.53") + 10 + "<br>"); // 20.53 => 20
+			document.write(parseInt("10,53") + 10 + "<br>"); // NaN => 20
+			document.write(parseInt("10A") + 10 + "<br>"); // NaN => 20
+			document.write(parseInt("A10") + 10 + "<br>"); // NaN
+			document.write(parseInt("   10") + 10 + "<br>"); // 20
+			document.write(parseInt("10   ") + 10 + "<br>"); // 20
+			document.write(parseInt("   10   ") + 10 + "<br>"); // 20
+			document.write(parseInt("Hello") + 10 + "<br>"); // NaN
+			document.write("<hr>");
+			document.write(parseFloat(true) + 10 + "<br>"); // 11 => NaN
+			document.write(parseFloat(false) + 10 + "<br>"); // 10 => NaN
+			document.write(parseFloat("10") + 10 + "<br>"); // 20
+			document.write(parseFloat("10.03") + 10 + "<br>"); // 20.03
+			document.write(parseFloat("10,03") + 10 + "<br>"); // NaN => 20
+			document.write(parseFloat("10A") + 10 + "<br>"); // NaN => 20
+			document.write(parseFloat("A10") + 10 + "<br>"); // NaN
+			document.write(parseFloat("   10") + 10 + "<br>"); // 20
+			document.write(parseFloat("10   ") + 10 + "<br>"); // 20
+			document.write(parseFloat("   10   ") + 10 + "<br>"); // 20
+			document.write(parseFloat("Hello") + 10 + "<br>"); // NaN
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

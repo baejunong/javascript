@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수 : function</title>
+		<script>
+			function test1() {
+				document.write("선언함수");
+			}
+			
+			var msg = function() {
+				document.write("익명함수");
+			}
+			
+			test1();
+			document.write("<hr>");
+//			document.write(msg);
+			msg();
+			document.write("<hr>");
+		</script>
+		<script>
+//			선언 함수는 구조를 읽을 때 먼저 읽힌다.
+//			그 다음에 차례대로 실행된다
+			test1();
+			function test1() {
+				document.write("Hi~~~");
+			}
+			function test1(){
+				document.write("Hello");				
+			}
+//			test1(); // 가장 최근의 것을 호출한다.
+			document.write("<hr>");
+		</script>
+		<script>
+//			test2(); // 2번째 읽을 때 사용되므로 미리 만들어지지 않으면 호출 불가능
+			var test2 = function(){
+				document.write("Hi~~~");
+			}
+			var test2 = function(){
+				document.write("Hello~~~");
+			}
+			test2(); // 가장 최근의 것을 호출한다.
+			document.write("<hr>");
+		</script>
+		<script>
+			test3();
+			function test3(){
+				document.write("Hi~~~");
+			}
+			var test3 = function(){
+				document.write("Hello~~~");
+			}
+			test3();
+			document.write("<hr>");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

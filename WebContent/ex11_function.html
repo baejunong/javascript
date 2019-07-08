@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수 : function</title>
+		<script>
+//			리턴이 없는 함수
+			function add(a, b) {
+				document.write("결과 : " + (a + b) + "<br>");
+			}
+			function sub(a, b) {
+				return (a-b);
+			}
+			add(10, 5);
+			var res = sub(5, 3);
+			document.write("결과 : " + res);
+			document.write("<hr>");
+//			구구단
+			function gogo(dan) {
+				for (var i = 1; i < 10; i++) {
+					document.write(dan + " * " + i + " = " + (dan * i) + "<br>");
+				}
+			}
+			// 두 값 사이의 짝수의 갯수는?
+			function even_count(start, end) {
+				var count = 0;
+				for (var i = start; i <= end; i++) {
+					if (i % 2 === 0) count++;
+				}
+				document.write("총 " + count + "개입니다.<br>");
+			}
+			function even_count2(start, end) {
+				var count = 0;
+				for (var i = start; i <= end; i++) {
+					if (i % 2 === 0) count++;
+				}
+				return count;
+			}
+		</script>
+	</head>
+	<body>
+		<h2>자바스크립트연습</h2>
+		<script>
+			add(5, 7);
+			var res2 = sub(5,3);
+			document.write("결과 : " + res2);
+			document.write("<hr>");
+			gogo(4);
+			document.write("<hr>");
+			even_count(50, 100);
+			var result = even_count2(10,50);
+			document.write("총 " + result + "개입니다.<br>");
+		</script>
+	</body>
+</html>

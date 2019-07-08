@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array 클래스</title>
+	</head>
+	<body>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<script>
+			var arr1 = ["Banana", "Orange", "Apple", "Mango"];
+			document.getElementById("demo1").innerHTML = arr1;
+//			toString() : 문자열로 변경
+			document.getElementById("demo2").innerHTML = arr1.toString();
+			document.write(arr1.length + ",&nbsp;");
+			document.write(arr1.toString().length);
+		</script>
+		<p id="demo3"></p>
+		<script>
+//			join() : 구분자를 다른 것으로 변경하자
+			var arr2 = ["Banana", "Orange", "Apple", "Mango"];
+			document.getElementById("demo3").innerHTML = arr2.join(" * ");
+		</script>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<script>
+//			push() : 추가, pop() : 삭제
+			var arr3 = ["Banana", "Orange", "Apple", "Mango"];
+			arr3.push("Kiwi");
+			document.getElementById("demo4").innerHTML = arr3;
+			
+			arr3.pop();
+			arr3.pop();
+			var k1 = arr3.pop(); // 삭제되는 배열요소를 별도로 저장할 수 있다.
+			document.getElementById("demo5").innerHTML = arr3;
+			document.getElementById("demo6").innerHTML = k1;
+		</script>
+		<p id="demo7"></p>
+		<p id="demo8"></p>
+		<p id="demo9"></p>
+		<p id="demo10"></p>
+		<script>
+//			shift(): 좌측이동, unshift() : 새로운 요소 추가되면서 우측이동
+//			배열이름[인덱스] = 변경내용
+//			delete 배열이름[인덱스] : 해당 인덱스 삭제 (권장하지 않음) ;
+//			shift()는 첫 요소 삭제, pop()는 마지막 요소 삭제(권장)
+			var arr4 = ["Banana", "Orange", "Apple", "Mango"];
+			arr4.shift(); // Banana는 삭제됨
+			document.getElementById("demo7").innerHTML = arr4;
+			arr4.unshift("Lemon");
+			document.getElementById("demo8").innerHTML = arr4;
+			arr4[0] = "Banana";
+			document.getElementById("demo9").innerHTML = arr4;
+			delete arr4[2];
+			document.getElementById("demo10").innerHTML = arr4;
+		</script>
+		<p id="demo11"></p>
+		<p id="demo12"></p>
+		<p id="demo13"></p>
+		<script>
+//			splice(index, 제거할 요소의 수, 추가할 요소들)
+//			splice(index, 제거할 요소의 수) 원하는 위치에서부터 추출 갯수
+//			splice(index) : 맨 앞에서부터 추출갯수
+			var arr5 = ["Banana", "Orange", "Apple", "Mango"];
+			arr5.splice(2, 0, "Lemon", "Kiwi");
+			document.getElementById("demo11").innerHTML = arr5;
+			arr5.splice(2, 2);
+			document.getElementById("demo12").innerHTML = arr5 + 10;
+			arr5.splice(3);
+			document.getElementById("demo13").innerHTML = arr5;
+		</script>
+		<p id="demo14"></p>
+		<script>
+//			concat(배열, 배열...), concat([값, 값, 값]) : 배열 병합
+			var arr6 = ["Banana", "Orange", "Apple", "Mango"];
+			var arr7 = ["Lemon", "Kiwi"];
+			var arr8 = arr6.concat(arr7);
+			document.getElementById("demo14").innerHTML = arr8;
+		</script>
+		
+		<p id="demo15"></p>
+		<p id="demo16"></p>
+		<script>
+//			문자 정렬 : sort(), reverse()
+			var arr9 = ["Banana", "Orange", "Apple", "Mango"];
+			document.getElementById("demo15").innerHTML = arr9.sort();
+			document.getElementById("demo16").innerHTML = arr9.reverse();
+		</script>
+		<p id="demo17"></p>
+		<p id="demo18"></p>
+		<script>
+//			sort()는 숫자 정렬 안됨
+			var arr10 = [5,2,8,9,3,,6,4,1,77];
+			document.getElementById("demo17").innerHTML = arr10.sort();
+			arr10.sort(function(a,b){
+				return a-b;
+			})
+			document.getElementById("demo18").innerHTML = arr10;
+		</script>
+		
+	</body>
+</html>

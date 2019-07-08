@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 이벤트</title>
+<style type="text/css">
+	img {
+	width: 100px; margin-top: 20px; border: 1px solid black;
+}
+</style>
+<script type="text/javascript">
+	function TrunOn() {
+		document.getElementById("myImg").src="images/pic_bulbon.gif";	
+	}
+	function TrunOff() {
+		document.getElementById("myImg").src="images/pic_bulboff.gif";	
+	}
+</script>
+</head>
+<body>
+<button onclick="TrunOn()"> 켜기 </button>
+<button onclick="TrunOff()"> 끄기 </button>
+<img id="myImg" src="images/pic_bulboff.gif">
+</body>
+</html>

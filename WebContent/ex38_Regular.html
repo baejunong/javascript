@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<p id ="demo1"></p>
+		<script>
+		// https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+		// \d : 숫자
+			var str = "Give 100%!";
+			var patt1 = /\d/g;
+			var result = str.match(patt1);
+			document.getElementById("demo1").innerHTML = result;
+		</script>
+		<hr>
+		
+		<p id ="demo2"></p>
+		<script>
+		// \s : 공백문자
+			str = "Give 100% !";
+			patt1 = /\s/g;
+			result = str.match(patt1);
+			document.getElementById("demo2").innerHTML = result;
+		</script>
+		<hr>
+		<p id ="demo3"></p>
+		<script>
+		// \b : 시작이나 끝에서 일치하는 단어 찾기
+			str = "Visit W3Schools";
+			patt1 = /\bW3/g;
+			result = str.match(patt1);
+			document.getElementById("demo3").innerHTML = result;
+		</script>
+		<hr>
+		<p id ="demo4"></p>
+		<script>
+		// \n+ : 하나 이상의 n을 포함하는 문자열
+			str = "Hellooo World! Hello W3schools!";
+			patt1 = /o+/g;
+			result = str.match(patt1);
+			document.getElementById("demo4").innerHTML = result;
+		</script>
+		<hr>
+		<p id ="demo5"></p>
+		<script>
+		// \n* : n이 0번 이상 포함된 문자열
+			str = "Hellooo World! Hello W3schools!";
+			patt1 = /lo*/g;
+			result = str.match(patt1);
+			document.getElementById("demo5").innerHTML = result;
+		</script>
+		<hr>
+		<p id ="demo6"></p>
+		<script>
+		// \n* : n이 0 또는 1회 포함된 문자열
+			str = "1, 100 or 1000?";
+			patt1 = /10?/g;
+			result = str.match(patt1);
+			document.getElementById("demo6").innerHTML = result;
+		</script>
+		<hr>
+		<p id="p01">The best things in life are free!</p>
+		<p id="demo7"></p>
+		<script>
+		// test(문자열) : 문자열에 대해 패턴을 검색하고 결과를 true 또는 false로 반환 
+			text = document.getElementById("p01").innerHTML; 
+			document.getElementById("demo7").innerHTML = /e/.test(text);
+		</script>
+		<hr>
+		<p id="demo8"></p>
+		<script>
+		// 문자열에서 지정된 패턴을 검색하고 발견된 텍스트를 객체로 반환
+		// 없으면 빈(null)
+			var obj = /e/.exec("The best things in life are free!");
+			document.getElementById("demo8").innerHTML =
+			"Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+		</script>
+		
+	</body>
+</html>

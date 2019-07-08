@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM Document</title>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p id="p1">This is a paragraph. </p>
+			<p id="p2">This is a another paragraph. </p>
+		</div>
+		<script>
+//			html 요소 추가 및 삭제
+//			document.createElement(element)
+//			document.removeChild(element)
+//			document.appendChild(element)
+//			document.replaceChild(new, old)
+//			document.write(text)
+//			https://www.w3schools.com/jsref/met_node_insertadjacentelement.asp 참조
+			var para = document.createElement("p"); // p태그 생성
+			var hr = document.createElement("hr");
+			var node = document.createTextNode("This is new."); // 글자 생성
+			para.appendChild(node); // p태그 안에 글자 넣기
+			
+			var element = document.getElementById("div1");
+			var child = document.getElementById("p2");
+			element.appendChild(para);
+			element.insertBefore(hr, child);
+			
+		</script>
+	</body>
+</html>

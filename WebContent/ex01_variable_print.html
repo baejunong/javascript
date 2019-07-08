@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>변수와 화면 출력하기</title>
+		<!-- <script></script>로도 가능 -->
+		<script type="text/javascript">
+			// 화면 출력하기(브라우저에 출력하기)
+			// body보다 head를 먼저 읽는다.
+			document.write("방가방가^^");
+			document.write("방가방가^^");
+			// 태그를 함게 사용할 수 있다.
+			document.write("<h2>방가방가^^</h2>");
+			
+			// 변수 : 변수를 만들 때 자료형을 지정하지 않는다.
+			// 1. 숫자로 시작하면 안돼요.
+			// 2. 대소문자 구분 : name과 Name은 완전히 다른 변수랍니다.
+			// 3. 변수는 대문자가 아닌 소문자로 시작하세요.
+			// 4. 상수는 모두 대문자로 만들어 주세요.
+			// 5. 여러 단어가 조합되는 경우 다음과 같이 낙타 표기법(camelcase)으로 작성해 주세요.
+	        // 6. 문장과 세미콜론(문장뒤에 세미콜론 찍기)
+     		// 7. 자바스크립트에서 이미 정의된 예약어(키워드)를 사용하면 안돼요.
+     		// ** 변수 만드는 방법 : var 변수명 = 데이터(정수, 실수, boolean, char, String, null, 함수, 클래스, 클래스 인스턴스);
+     		var res = 1; // 정수
+     		document.write("<h3>res="+res+"</h3>");
+     		res = 3.14; // 실수
+     		document.write("<h3>res="+res+"</h3>");
+     		res = true; // boolean
+     		document.write("<h3>res="+res+"</h3>");
+     		res = 'c'; // char
+     		document.write("<h3>res="+res+"</h3>");
+     		res = "Boys"; // String
+     		document.write("<h3>res="+res+"</h3>");
+     		res = null; // null
+     		document.write("<h3>res="+res+"</h3>");
+     		var res2; // 변수를 선언하고 데이터를 대입하지 않은 경우 : undefined
+     		document.write("<h3>res2="+res2+"</h3>");
+     		res3 = 3.14; // 변수 선언하지 않아도 사용가능, 비추천
+     		document.write("<h3>res3="+res3+"</h3>");
+     		/* res4; // 선언도 안하고 데이터 없으면 not defined 오류 발생
+     		document.write("<h3>res4="+res4+"</h3>"); */
+     		
+     		// 돌발질문
+     		// 1. 
+     		var data1=10;
+     		var data1=20;
+     		var data1=30;
+     		//2.
+     		var data2=10;
+     		data2=20;
+     		data2=30;
+     		
+     		// 결론 : 1은 data1변수를 3개를 만듦, 2는 data2변수 하나를 만듦
+     		document.write("<hr>");
+     		document.write("data1 = " + data1);
+     		document.write("data2 = " + data2);
+		</script>
+		
+	</head>
+	<body>
+		<h1>Hello</h1>
+		<h2><p>안녕하세요</p></h2>
+	</body>
+</html>

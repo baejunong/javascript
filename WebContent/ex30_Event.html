@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouseover와 onmouseout</title>
+<script type="text/javascript">
+	
+	function mOver(obj) {
+		obj.innerHTML = "Thank You";
+	}
+	function mOut(obj) {
+		obj.innerHTML = "Mouse Over Me";
+	}
+	function mDown(obj) {
+		obj.style.backgroundColor="#1ec5e5";
+		obj.innerHTML = "Release Me";
+	}
+	function mUp(obj) {
+		obj.innerHTML = "Thank You";
+	}
+</script>
+</head>
+<body>
+    <!-- this : 현재 실행 중인 객체를 말함 -->
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)"  
+	     style="background-color: #898989;width: 120px; height: 20px; padding: 40px;" >
+		Mouse Over Me
+	</div>
+	<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+	     style="background-color: purple;width: 120px; height: 20px; padding: 40px;" >
+		Click Me
+	</div>
+</body>
+</html>

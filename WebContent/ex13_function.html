@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수 : function</title>
+		<script>
+//			함수 호출 : 1. 자바스크립트 안에서 함수 호출,
+//					2. 태그 속성에서 onXXXXX()에서 함수 호출
+//					   onclick = "자바스크립트함수()"
+//					   onmouseover, onmouseout, onload, onchange, onkeydown, ...
+
+			function test(su){
+				document.write("<h2> 함수 호출 연습 " + su + "</h2>");
+			}
+		</script>
+	</head>
+	<!-- <body onload="test(2)">
+		body 내용을 읽고 난 다음에 test(su) 함수를 호출한다. 기존 내용은 사라진다.
+	-->
+	<body>
+		<h1> 자바스크립트 함수 호출 </h1>
+		<script>
+			test(1);
+		</script>
+		<hr>
+		<button onclick="test(3)">함수 호출</button>
+		<hr>
+		<div style="width: 50px; border: 1px solid black;" onmouseover="test(4)">
+			함수 호출
+		</div>
+	</body>
+</html>

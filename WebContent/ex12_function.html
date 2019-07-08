@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수 : function</title>
+		<script>
+			// 계산기
+			function calc(su1, su2, op) {
+				var res;
+				switch (op) {
+					case "+": res = su1 + su2; break;
+					case "-": res = su1 - su2; break;
+					case "*": res = su1 * su2; break;
+					case "/": res = su1 / su2; break;
+				}
+				document.write("결과 : " + res + "<br>");
+			}
+			function calc2(su1, su2, op) {
+				var res;
+				switch (op) {
+					case "+": res = su1 + su2; break;
+					case "-": res = su1 - su2; break;
+					case "*": res = su1 * su2; break;
+					case "/": res = su1 / su2; break;
+				}
+				return res;
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			calc(2,5,"+");
+			calc(2,5,"-");
+			calc(2,5,"*");
+			calc(2,5,"/");
+			document.write("<hr>");
+			var result = calc2(20,5,"+");
+			document.write("결과 : " + result + "<br>");
+			result = calc2(20,5,"-");
+			document.write("결과 : " + result + "<br>");
+			result = calc2(20,5,"*");
+			document.write("결과 : " + result + "<br>");
+			result = calc2(20,5,"/");
+			document.write("결과 : " + result + "<br>");
+		</script>
+	</body>
+</html>

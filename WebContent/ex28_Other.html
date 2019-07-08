@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>기타</title>
+		<script>
+			function test1() {
+				var now = new Date();
+				var s = now.getFullYear() + ". " + (now.getMonth() + 1) + ". " + now.getDate() + ".&nbsp;&nbsp;&nbsp;" + now.getHours() + " : " + now.getMinutes() + " : " + now.getSeconds();
+				document.getElementById("clock1").innerHTML = s;
+				
+//				해당 지연 시간 지나면 test() 호출
+				setTimeout("test1()", 1000);
+			}
+			function test2(){
+				document.getElementById("clock2").innerHTML = Date();
+				
+				setTimeout("test2()", 1000);
+			}
+			function test3() {
+				setInterval(() => {
+					var d = new Date();
+					document.getElementById("clock3").innerHTML = d.toLocaleTimeString();
+				}, 1000);
+			}
+		</script>
+		
+	</head>
+	<body>
+		<h2><span id="clock1"></span></h2>
+		<h2><span id="clock2"></span></h2>
+		<h2><span id="clock3"></span></h2>
+		<button onclick="test1()">시작</button>
+		<button onclick="test2()">시작</button>
+		<button onclick="test3()">시작</button>
+	</body>
+</html>

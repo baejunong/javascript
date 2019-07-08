@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--
+                    [root element]
+                   ↑  parentNode  ↑ 
+      firstChild ↓                  ↓ lastChild   
+             [head]  → nextSibling    [body]
+                    ← previousSibling
+                    
+	 ** 	head, body  =>  childNodes[nodenumber]
+	 **     nodeValue = > 태그 사이의 문자를 말한다.
+  -->
+  
+  <h1 id="demo1"> My First Page </h1>
+  <p id="demo2"></p>
+  <script type="text/javascript">
+   // 방법1)
+   //  document.getElementById("demo2").innerHTML =
+   // 	 document.getElementById("demo1").innerHTML;
+   // 방법2)
+   //  document.getElementById("demo2").innerHTML =
+   // 	  document.getElementById("demo1").firstChild.nodeValue;
+   // 방법3)
+        document.getElementById("demo2").innerHTML =
+        	document.getElementById("demo1").childNodes[0].nodeValue;
+  </script>
+</body>
+</html>
+
+
+
+
+
